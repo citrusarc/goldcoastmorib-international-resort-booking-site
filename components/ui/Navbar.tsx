@@ -31,6 +31,7 @@ export const Navbar = () => {
   return (
     <HeroUINavbar
       isMenuOpen={openMobileMenu}
+      onMenuOpenChange={setOpenMobileMenu}
       maxWidth="xl"
       position="sticky"
       className={clsx(
