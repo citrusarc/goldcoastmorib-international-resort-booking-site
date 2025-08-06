@@ -6,13 +6,13 @@ import { alexBrush, zain } from "@/lib/font";
 export default function HeroSection() {
   return (
     <div className="relative">
-      <div className="relative left-1/2 -translate-x-1/2 -translate-y-16 w-screen h-[480px] sm:h-[720px] overflow-hidden rounded-b-[96px] sm:rounded-b-[180px]">
+      <div className="relative left-1/2 -translate-x-1/2 -translate-y-16 w-screen h-[480px] sm:h-[640px] overflow-hidden rounded-b-[96px] sm:rounded-b-[180px]">
         <Image
           fill
           priority
           src="/Images/hero-banner-1.png"
           alt="Hero"
-          className="object-cover"
+          className="w-full h-full object-cover"
         />
 
         <div className="absolute inset-0 bg-black/30" />
