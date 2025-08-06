@@ -10,7 +10,7 @@ import {
   Button,
 } from "@heroui/react";
 import { link as linkStyles } from "@heroui/theme";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import clsx from "clsx";
@@ -21,9 +21,9 @@ import { siteConfig } from "@/config/site";
 export const Navbar = () => {
   const [openMobileMenu, setOpenMobileMenu] = useState(false);
 
-  const router = useRouter();
   const navItems = siteConfig.navItems.filter((item) => !item.status?.isHidden);
 
+  const router = useRouter();
   const handleClick = () => {
     router.push("/auth/login");
   };
@@ -31,60 +31,79 @@ export const Navbar = () => {
   return (
     <HeroUINavbar
       isMenuOpen={openMobileMenu}
-      onMenuOpenChange={setOpenMobileMenu}
       maxWidth="xl"
       position="sticky"
+      className={clsx(
+        "transition-colors duration-300 ease-in-out",
+        openMobileMenu ? "bg-background/70" : "bg-transparent"
+      )}
     >
-      <NavbarContent className="basis-1/5 sm:basis-full" justify="start">
-        <NavbarBrand as="li" className="gap-3 max-w-fit">
+      <NavbarContent justify="start">
+        <NavbarBrand className="max-w-fit">
           <Link className="flex justify-start items-center gap-1" href="/">
             <Logo />
-            <p className="font-bold text-inherit">ACME</p>
+            <p className="font-bold">Gold Coast Resort</p>
           </Link>
         </NavbarBrand>
-        <ul className="hidden lg:flex gap-4 justify-start ml-2">
-          {siteConfig.navItems.map((item) => (
-            <NavbarItem key={item.href}>
+        <NavbarContent className="hidden sm:flex items-center justify-start ml-2 gap-4">
+          {navItems
+            .filter((item) => item.position === "start")
+            .map((item) => (
+              <NavbarItem key={item.label}>
+                <Link
+                  className={clsx(
+                    linkStyles({ color: "foreground" }),
+                    item.status?.isDisabled && "cursor-not-allowed !opacity-50"
+                  )}
+                  href={item.status?.isDisabled ? "#" : item.href}
+                  onClick={(e) => item.status?.isDisabled && e.preventDefault()}
+                >
+                  {item.label}
+                </Link>
+              </NavbarItem>
+            ))}
+        </NavbarContent>
+      </NavbarContent>
+
+      <NavbarContent className="hidden sm:flex" justify="end">
+        <Button onClick={handleClick}>Login</Button>
+      </NavbarContent>
+
+      <NavbarContent className="sm:hidden flex-1 pl-4" justify="end">
+        <NavbarMenuToggle aria-label="Toggle navigation menu" />
+      </NavbarContent>
+
+      <NavbarMenu className="px-6 py-6">
+        <div className="flex flex-col gap-4">
+          {navItems.map((item) => (
+            <NavbarMenuItem
+              key={item.label}
+              className={clsx(
+                "py-2",
+                item.status?.isDisabled && "cursor-not-allowed !opacity-50"
+              )}
+            >
               <Link
                 className={clsx(
-                  linkStyles({ color: "foreground" }),
-                  "data-[active=true]:text-primary data-[active=true]:font-medium"
+                  "flex items-center gap-2",
+                  !item.status?.isDisabled && "cursor-not-allowed !opacity-50"
                 )}
-                color="foreground"
                 href={item.href}
-              >
-                {item.label}
-              </Link>
-            </NavbarItem>
-          ))}
-        </ul>
-      </NavbarContent>
-
-      <NavbarContent
-        className="hidden sm:flex basis-1/5 sm:basis-full"
-        justify="end"
-      >
-        <NavbarItem className="hidden sm:flex gap-2">test</NavbarItem>
-      </NavbarContent>
-
-      <NavbarMenu>
-        <div className="mx-4 mt-2 flex flex-col gap-2">
-          {navItems.map((item, index) => (
-            <NavbarMenuItem key={`${item}-${index}`}>
-              <Link
-                color={
-                  index === 2
-                    ? "primary"
-                    : index === navItems.length - 1
-                      ? "danger"
-                      : "foreground"
-                }
-                href={item.href}
+                onClick={(e) => {
+                  if (item.status?.isDisabled) {
+                    e.preventDefault();
+                  } else {
+                    setOpenMobileMenu(false);
+                  }
+                }}
               >
                 {item.label}
               </Link>
             </NavbarMenuItem>
           ))}
+          <Button size="lg" onClick={handleClick}>
+            Login
+          </Button>
         </div>
       </NavbarMenu>
     </HeroUINavbar>

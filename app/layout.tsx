@@ -1,6 +1,5 @@
 import "@/styles/globals.css";
 import { Metadata, Viewport } from "next";
-import Link from "next/link";
 import clsx from "clsx";
 
 import { Providers } from "@/app/providers";
@@ -40,7 +39,7 @@ export default function RootLayout({
           fontSans.variable
         )}
       >
-        <Providers themeProps={{ attribute: "class", defaultTheme: "dark" }}>
+        <Providers themeProps={{ attribute: "class", defaultTheme: "light" }}>
           <div className="relative flex flex-col h-screen">
             <Navbar />
             <main className="relative z-10 container mx-auto max-w-7xl px-6 flex-grow">
