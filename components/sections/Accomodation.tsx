@@ -29,6 +29,7 @@ export default function AccomodationSection() {
           <p className="flex text-lg">
             Comfort, space, and a view to remember.
           </p>
+          <p>Test new things</p>
         </div>
         <div className="relative w-full sm:w-1/2 max-w-sm aspect-square overflow-hidden">
           <Image
