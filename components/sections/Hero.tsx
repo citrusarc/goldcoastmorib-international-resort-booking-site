@@ -1,17 +1,20 @@
 "use client";
 
-import Image from "next/image";
+import { Button } from "@heroui/button";
+
 import { alexBrush, zain } from "@/lib/font";
 
 export default function HeroSection() {
   return (
     <div className="relative">
-      <div className="relative left-1/2 -translate-x-1/2 -translate-y-16 w-screen h-[480px] sm:h-[640px] overflow-hidden rounded-b-[96px] sm:rounded-b-[180px]">
-        <Image
-          fill
-          priority
-          src="/Images/hero-banner-1.png"
-          alt="Hero"
+      <div className="relative left-1/2 -translate-x-1/2 -translate-y-16 w-screen h-[560px] sm:h-[800px] overflow-hidden rounded-b-[64px] sm:rounded-b-[180px]">
+        <video
+          autoPlay
+          loop
+          muted
+          playsInline
+          preload="auto"
+          src="/Videos/promo-video.mp4"
           className="w-full h-full object-cover"
         />
 
@@ -21,6 +24,12 @@ export default function HeroSection() {
             Gold Coast Resort
           </p>
           <p className={`${zain.className} text-3xl sm:text-5xl`}>Morib</p>
+          <Button
+            size="lg"
+            className="mt-4 sm:mt-12 sm:p-12 sm:py-8 sm:text-lg bg-amber-500 text-white"
+          >
+            Reserve Your Escaped
+          </Button>
         </div>
       </div>
     </div>
