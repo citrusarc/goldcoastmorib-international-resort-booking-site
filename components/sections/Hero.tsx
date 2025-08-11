@@ -14,7 +14,7 @@ export default function HeroSection() {
           muted
           playsInline
           preload="auto"
-          src="/Videos/promo-video.mp4"
+          src="https://res.cloudinary.com/dn6hwyxpz/video/upload/v1754894823/promo-video_hvwdsa.mp4"
           className="w-full h-full object-cover"
         />
 

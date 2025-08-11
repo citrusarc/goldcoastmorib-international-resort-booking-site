@@ -24,7 +24,6 @@
     "@prisma/client": "^6.13.0",
     "@react-aria/ssr": "3.9.10",
     "@react-aria/visually-hidden": "3.8.26",
-    "@vercel/blob": "^1.1.1",
     "clsx": "^2.1.1",
     "framer-motion": "^11.18.2",
     "iconoir-react": "^7.11.0",
