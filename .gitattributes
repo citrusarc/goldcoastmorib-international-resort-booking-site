@@ -1,3 +1,0 @@
-*.mp4 filter=lfs diff=lfs merge=lfs -text
-public/Videos/*.mp4 filter=lfs diff=lfs merge=lfs -text
-public/Videos/promo-video.mp4 filter=lfs diff=lfs merge=lfs -text
