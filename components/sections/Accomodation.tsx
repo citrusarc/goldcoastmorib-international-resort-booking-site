@@ -67,7 +67,7 @@ export default function AccomodationSection() {
           </p>
         </div>
         <div
-          className="relative flex flex-col gap-8 w-full"
+          className="relative flex flex-col gap-4 w-full"
           style={{
             WebkitMaskImage:
               "linear-gradient(to right, transparent, black 20%, black 80%, transparent)",

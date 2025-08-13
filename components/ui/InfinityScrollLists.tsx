@@ -22,7 +22,7 @@ export default function InfiniteScrollList({
           repeat: Infinity,
           ease: "linear",
         }}
-        className="flex w-max gap-6"
+        className="flex w-max gap-4"
       >
         {[...items, ...items].map((item, i) => {
           const key = `item-${i}`;
