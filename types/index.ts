@@ -41,3 +41,26 @@ export type FooterItem = Record<
   "section 1" | "section 2" | "section 3" | "section 4" | "section 5",
   FooterLink[]
 >;
+
+export type BrandLogo = {
+  icon: React.FC<IconSvgProps>;
+  alt: string;
+};
+
+export type ImageProps = {
+  src: string;
+  alt: string;
+  width?: number;
+  height?: number;
+};
+
+export type QuoteItem = {
+  text: string;
+};
+
+export type InfiniteScrollItem = BrandLogo | ImageProps | QuoteItem;
+
+export type InfiniteScrollListProps = {
+  items: InfiniteScrollItem[];
+  duration?: number;
+};

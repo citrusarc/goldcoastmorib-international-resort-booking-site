@@ -1,5 +1,41 @@
+"use client";
+
 import Image from "next/image";
 import { merriweather } from "@/lib/font";
+import InfiniteScrollList from "@/components/ui/InfinityScrollLists";
+
+const images = [
+  {
+    src: "/Images/hero-banner-1.png",
+    alt: "Ecosystem 1",
+    width: 240,
+    height: 240,
+  },
+  {
+    src: "/Images/hero-banner-1.png",
+    alt: "Ecosystem 2",
+    width: 240,
+    height: 240,
+  },
+  {
+    src: "/Images/hero-banner-1.png",
+    alt: "Ecosystem 3",
+    width: 240,
+    height: 240,
+  },
+  {
+    src: "/Images/hero-banner-1.png",
+    alt: "Ecosystem 4",
+    width: 240,
+    height: 240,
+  },
+  {
+    src: "/Images/hero-banner-1.png",
+    alt: "Ecosystem 5",
+    width: 240,
+    height: 240,
+  },
+];
 
 export default function AccomodationSection() {
   return (
@@ -20,7 +56,7 @@ export default function AccomodationSection() {
         </div>
       </div>
       <div className="relative flex flex-col left-1/2 -translate-x-1/2 w-screen py-8 sm:py-16 px-6 lg:px-[280px] sm:px-6 gap-8 text-amber-900 bg-gradient-to-b from-amber-500 to-transparent">
-        <div className="flex- flex-col gap-4">
+        <div className="flex flex-col gap-8">
           <h2
             className={`${merriweather.className} text-3xl sm:text-4xl font-bold`}
           >
@@ -29,15 +65,22 @@ export default function AccomodationSection() {
           <p className="flex text-lg">
             Comfort, space, and a view to remember.
           </p>
-          <p>Testing on the run</p>
         </div>
-        <div className="relative w-full sm:w-1/2 max-w-sm aspect-square overflow-hidden">
-          <Image
-            fill
-            src="/Images/hero-banner-1.png"
-            alt="Overview"
-            className="object-cover"
-          />
+        <div
+          className="relative flex flex-col gap-8 w-full"
+          style={{
+            WebkitMaskImage:
+              "linear-gradient(to right, transparent, black 20%, black 80%, transparent)",
+            maskImage:
+              "linear-gradient(to right, transparent, black 20%, black 80%, transparent)",
+            WebkitMaskRepeat: "no-repeat",
+            maskRepeat: "no-repeat",
+            WebkitMaskSize: "100% 100%",
+            maskSize: "100% 100%",
+          }}
+        >
+          <InfiniteScrollList duration={60} items={images} direction="left" />
+          <InfiniteScrollList duration={60} items={images} direction="right" />
         </div>
       </div>
     </div>
