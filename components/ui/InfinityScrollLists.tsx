@@ -27,13 +27,13 @@ export default function InfiniteScrollList({
         {[...items, ...items].map((item, i) => {
           const key = `item-${i}`;
 
-          if ("text" in item) {
+          if ("message" in item) {
             return (
               <div
                 key={key}
                 className="flex items-center justify-center mx-12 sm:mx-16 w-[240px] sm:w-[360px] h-fit font-normal italic text-start text-orange-100 shrink-0"
               >
-                <p>{item.text}</p>
+                <p>{item.message}</p>
               </div>
             );
           }

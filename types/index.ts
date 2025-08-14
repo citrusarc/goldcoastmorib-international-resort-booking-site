@@ -55,7 +55,8 @@ export type ImageProps = {
 };
 
 export type QuoteItem = {
-  text: string;
+  message: string;
+  author: string;
 };
 
 export type InfiniteScrollItem = BrandLogo | ImageProps | QuoteItem;

@@ -45,8 +45,27 @@ export default function RootLayout({
             <main className="relative z-10 container mx-auto max-w-7xl px-6 flex-grow">
               {children}
             </main>
-            <footer className="flex flex-col items-start justify-start py-8 sm:py-16 px-6 lg:px-[280px] sm:px-6 mt-16 gap-8">
-              Project Lightning
+            <footer className="flex flex-col items-start justify-start py-8 sm:py-16 px-6 lg:px-[280px] sm:px-6 mt-16 gap-8 border-t border-slate-200">
+              <div className="flex flex-col sm:flex-row gap-8 w-full justify-between">
+                <div className="flex flex-col gap-4">
+                  <p>Logo</p>
+                  <p>EXAMPLE SDN BHD (12345)</p>
+                  <p>
+                    No. 23, Jalan Teknologi 3/6B, <br />
+                    Taman Sains Selangor 1,
+                    <br />
+                    47810 Selangor, Malaysia.
+                  </p>
+                  <p>support@example.com</p>
+                </div>
+                <div className="flex flex-col sm:flex-row gap-8 sm:gap-24">
+                  <div className="flex flex-col gap-4">Site Map</div>
+                </div>
+              </div>
+              <div className="flex flex-col sm:flex-row w-full items-start sm:items-center justify-start sm:justify-between gap-8">
+                <p className="hidden sm:inline">Term of Services</p>
+                <p>© 2025 Example Sdn Bhd. All right reserved.</p>
+              </div>
             </footer>
           </div>
         </Providers>
