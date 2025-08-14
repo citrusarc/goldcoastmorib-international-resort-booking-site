@@ -1,6 +1,5 @@
 "use client";
 
-import Image from "next/image";
 import { merriweather } from "@/lib/font";
 import InfiniteScrollList from "@/components/ui/InfinityScrollLists";
 
@@ -41,7 +40,7 @@ export default function AccomodationSection() {
   return (
     <div className="relative mt-8 sm:mt-16">
       <div className="relative left-1/2 -translate-x-1/2 w-screen">
-        <div className="custom-shape-divider-top-1754616394 bg-amber-500">
+        <div className="custom-shape-divider-top-1754616394 bg-blue-800">
           <svg
             data-name="Layer 1"
             xmlns="http://www.w3.org/2000/svg"
@@ -55,14 +54,12 @@ export default function AccomodationSection() {
           </svg>
         </div>
       </div>
-      <div className="relative flex flex-col left-1/2 -translate-x-1/2 w-screen py-8 sm:py-16 px-6 lg:px-[280px] sm:px-6 gap-8 text-amber-900 bg-gradient-to-b from-amber-500 to-transparent">
+      <div className="relative flex flex-col left-1/2 -translate-x-1/2 w-screen py-8 sm:py-16 px-6 lg:px-[280px] sm:px-6 gap-8 text-amber-500 bg-gradient-to-b from-blue-800 via-blue-400 to-transparent">
         <div className="flex flex-col gap-8">
-          <h2
-            className={`${merriweather.className} text-3xl sm:text-4xl font-bold`}
-          >
+          <h2 className={`${merriweather.className} text-3xl sm:text-4xl`}>
             Your Private Slice of Paradise
           </h2>
-          <p className="flex text-lg">
+          <p className="flex text-lg text-white">
             Comfort, space, and a view to remember.
           </p>
         </div>

@@ -1,4 +1,9 @@
-import { Alex_Brush, Merriweather, Zain } from "next/font/google";
+import {
+  Alex_Brush,
+  Cormorant_Garamond,
+  Merriweather,
+  Zain,
+} from "next/font/google";
 
 export const alexBrush = Alex_Brush({
   weight: "400",
@@ -7,13 +12,22 @@ export const alexBrush = Alex_Brush({
 });
 
 export const zain = Zain({
-  weight: "400",
+  weight: ["300", "400"],
   subsets: ["latin"],
+  style: ["normal", "italic"],
   display: "swap",
 });
 
 export const merriweather = Merriweather({
-  weight: "400",
+  weight: ["300", "400"],
   subsets: ["latin"],
+  style: ["normal", "italic"],
+  display: "swap",
+});
+
+export const cormorantGaramond = Cormorant_Garamond({
+  weight: ["300", "400"],
+  subsets: ["latin"],
+  style: ["normal", "italic"],
   display: "swap",
 });

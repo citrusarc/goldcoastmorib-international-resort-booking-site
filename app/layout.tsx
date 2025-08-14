@@ -45,7 +45,7 @@ export default function RootLayout({
             <main className="relative z-10 container mx-auto max-w-7xl px-6 flex-grow">
               {children}
             </main>
-            <footer className="flex flex-col items-start justify-start py-8 sm:py-16 px-6 lg:px-[280px] sm:px-6 mt-16 gap-8 border-t border-slate-200">
+            <footer className="flex flex-col items-start justify-start py-8 sm:py-16 px-6 lg:px-[280px] sm:px-6 gap-8 border-t border-slate-200">
               <div className="flex flex-col sm:flex-row gap-8 w-full justify-between">
                 <div className="flex flex-col gap-4">
                   <p>Logo</p>

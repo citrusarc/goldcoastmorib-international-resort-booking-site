@@ -2,7 +2,7 @@
 
 import { Button } from "@heroui/button";
 
-import { alexBrush, zain } from "@/lib/font";
+import { cormorantGaramond, zain } from "@/lib/font";
 
 export default function HeroSection() {
   return (
@@ -20,13 +20,19 @@ export default function HeroSection() {
 
         <div className="absolute inset-0 bg-black/30" />
         <div className="absolute flex flex-col inset-0 mt-[280px] sm:mt-[240px] items-center justify-center text-white">
-          <p className={`${alexBrush.className} text-5xl sm:text-8xl`}>
-            Gold Coast Resort
-          </p>
-          <p className={`${zain.className} text-3xl sm:text-5xl`}>Morib</p>
+          <h2
+            className={`${cormorantGaramond.className} text-5xl sm:text-8xl font-light`}
+          >
+            Gold Coast Morib
+          </h2>
+          <h2
+            className={`${cormorantGaramond.className} text-3xl sm:text-5xl font-light`}
+          >
+            International Resort
+          </h2>
           <Button
             size="lg"
-            className="mt-4 sm:mt-12 sm:p-12 sm:py-8 sm:text-lg bg-amber-500 text-white"
+            className="mt-4 sm:mt-12 sm:p-12 sm:py-8 sm:text-lg bg-gradient-to-r from-blue-900 to-blue-500 text-amber-500"
           >
             Reserve Your Escaped
           </Button>

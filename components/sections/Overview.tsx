@@ -17,11 +17,11 @@ export default function OverviewSection() {
 
       <div className="flex flex-col w-full sm:w-1/2 gap-8">
         <h2
-          className={`${merriweather.className} text-3xl sm:text-4xl font-bold`}
+          className={`${merriweather.className} text-3xl sm:text-4xl text-amber-500`}
         >
           Seaside Gem on Selangor&apos;s Tranquil Coast
         </h2>
-        <p className="flex text-lg">
+        <p className="flex text-lg text-slate-800">
           Wake up to the rhythm of the waves, unwind in your private jacuzzi,
           and make a splash with the kids at the onsite water theme park, all
           just steps from your suite.
@@ -33,7 +33,7 @@ export default function OverviewSection() {
                 px-0 sm:px-4 py-0 sm:py-2 
                 gap-0 sm:gap-2 
                 rounded-full sm:rounded-full 
-                border border-amber-500 bg-amber-50 text-amber-500"
+                border border-blue-500 bg-blue-50 text-blue-500"
           >
             <Bed className="w-6 h-6" />
             <span className="text-lg">Stay</span>
@@ -44,7 +44,7 @@ export default function OverviewSection() {
                 px-0 sm:px-4 py-0 sm:py-2 
                 gap-0 sm:gap-2 
                 rounded-full sm:rounded-full 
-                border border-amber-50 bg-amber-500 text-amber-50"
+                border border-blue-50 bg-gradient-to-r from-blue-800 to-blue-500 text-amber-500"
           >
             <Cutlery className="w-6 h-6" />
             <span className="text-lg">Dine</span>
@@ -55,7 +55,7 @@ export default function OverviewSection() {
                 px-0 sm:px-4 py-0 sm:py-2 
                 gap-0 sm:gap-2 
                 rounded-full sm:rounded-full 
-                border border-amber-500 bg-amber-50 text-amber-500"
+                border border-blue-500 bg-blue-50 text-blue-500"
           >
             <BirthdayCake className="w-6 h-6" />
             <span className="text-lg">Party</span>
