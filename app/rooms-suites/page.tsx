@@ -21,13 +21,13 @@ export default function RoomsAndSuitesPage() {
               className="object-cover object-center"
             />
           </div>
-          <CardFooter className="flex flex-col gap-4 py-4 items-start">
+          <CardFooter className="flex flex-col gap-4 p-4 items-start">
             <h2 className="inline-flex gap-2 text-lg font-semibold">
               {item.name}
               {item.isRecommended && <CrownCircle className="text-amber-500" />}
             </h2>
             <div>
-              <p className="text-sm text-slate-500">Starting from</p>
+              <p className="text-slate-500">Starting from</p>
               <span className="text-lg font-semibold">
                 {item.price.currency}
                 {item.price.current}
@@ -35,24 +35,21 @@ export default function RoomsAndSuitesPage() {
               </span>
             </div>
             <div>
-              {rooms
-                .filter((item) => item.facilities?.length)
-                .map((item) => (
-                  <div key={item.id}>
-                    {item.facilities?.map((item, index) => {
-                      if (!item.icon) return null; // skip if no icon
-                      const Icon = item.icon;
-                      return (
-                        <div key={index} className="flex flex-col gap-2">
-                          <span className="inline-flex gap-2 items-center text-sm text-slate-500">
-                            <Icon className="w-4 h-4" />
-                            {item.label}
-                          </span>
-                        </div>
-                      );
-                    })}
-                  </div>
-                ))}
+              <div className="flex flex-col gap-2">
+                {item.facilities?.map((item) => {
+                  if (!item.icon) return null;
+                  const Icon = item.icon;
+                  return (
+                    <span
+                      key={item.label}
+                      className="inline-flex gap-2 items-center text-sm text-slate-500"
+                    >
+                      <Icon className="w-4 h-4" />
+                      {item.label}
+                    </span>
+                  );
+                })}
+              </div>
             </div>
           </CardFooter>
         </Card>

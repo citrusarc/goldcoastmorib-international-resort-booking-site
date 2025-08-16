@@ -72,7 +72,7 @@ export type PriceItem = {
   current: string;
 };
 
-export type FacilitiesItem = {
+export type FacilitiesProps = {
   icon?: React.FC<IconSvgProps>;
   label?: string;
 };
@@ -83,8 +83,17 @@ export type RoomItem = {
   image: string;
   alt: string;
   description?: string;
-  facilities?: FacilitiesItem[];
+  facilities?: FacilitiesProps[];
   price: PriceItem;
   isDiscount: boolean;
   isRecommended: boolean;
+};
+
+export type FacilitiesItems = {
+  id: string;
+  name: string;
+  image: string;
+  alt: string;
+  description?: string;
+  facilities?: FacilitiesProps[];
 };
