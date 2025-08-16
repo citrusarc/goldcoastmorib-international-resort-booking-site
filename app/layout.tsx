@@ -11,13 +11,66 @@ import { Navbar } from "@/components/ui/Navbar";
 import { Archive, Mail, Phone } from "iconoir-react";
 
 export const metadata: Metadata = {
-  title: {
-    default: siteConfig.name,
-    template: `%s - ${siteConfig.name}`,
-  },
-  description: siteConfig.description,
+  title: "Gold Coast Morib International Resort | Beachfront Family Getaway",
+  description:
+    "Stay at Gold Coast Morib International Resort, a beachfront destination in Banting, Selangor. Perfect for family vacations, waterpark fun, and relaxing getaways by the sea.",
   icons: {
     icon: "/favicon.ico",
+  },
+  keywords: [
+    "Gold Coast Morib",
+    "Gold Coast Morib International Resort",
+    "Morib beach resort",
+    "family resort Selangor",
+    "waterpark Malaysia",
+    "resort Banting",
+    "Gold Coast Resort Morib booking",
+    "beachfront resort Malaysia",
+    "holiday resort Selangor",
+    "vacation Malaysia",
+  ],
+  authors: [{ name: "Gold Coast Morib International Resort" }],
+  creator: "Gold Coast Morib International Resort",
+  openGraph: {
+    title: "Gold Coast Morib International Resort | Beachfront Family Getaway",
+    description:
+      "Book your stay at Gold Coast Morib International Resort. Enjoy beachfront views, family-friendly waterpark, and a relaxing getaway in Banting, Selangor.",
+    url: "https://goldcoastresort-booking-site.vercel.app/",
+    siteName: "Gold Coast Morib International Resort",
+    images: [
+      {
+        url: "https://goldcoastresort-booking-site.vercel.app/Images/banner.png",
+        width: 1200,
+        height: 630,
+        alt: "Gold Coast Morib Resort Beachfront View",
+      },
+      {
+        url: "https://goldcoastresort-booking-site.vercel.app/Images/brand-logo.png",
+        width: 800,
+        height: 600,
+        alt: "Gold Coast Morib Resort Logo",
+      },
+    ],
+    locale: "en_US",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Gold Coast Morib International Resort | Beachfront Family Getaway",
+    description:
+      "Discover Gold Coast Morib International Resort. Family-friendly waterpark, beachfront views, and a perfect getaway in Banting, Selangor.",
+    images: [
+      "https://goldcoastresort-booking-site.vercel.app/Images/banner.png",
+    ],
+    creator: "@goldcoastmorib", // optional, remove if no Twitter
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+    },
   },
 };
 
