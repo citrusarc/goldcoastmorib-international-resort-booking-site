@@ -31,6 +31,10 @@ export default function HeroSection() {
             International Resort
           </h2>
           <Button
+            as="a"
+            href="https://www.agoda.com/en-gb/gold-coast-morib-international-resort/hotel/banting-my.html?cid=1450498&ds=qSflqjSDAunJhkhz"
+            target="_blank"
+            rel="noopener noreferrer"
             size="lg"
             className="mt-4 sm:mt-12 sm:p-12 sm:py-8 sm:text-lg bg-gradient-to-r from-blue-900 to-blue-500 text-amber-500"
           >

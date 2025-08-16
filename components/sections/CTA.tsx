@@ -19,7 +19,14 @@ export default function CTASection() {
         Whether it’s a weekend retreat or a long-awaited holiday, the perfect
         stay begins here.
       </p>
-      <Button size="lg" className="w-fit bg-amber-500 text-white">
+      <Button
+        as="a"
+        href="https://www.agoda.com/en-gb/gold-coast-morib-international-resort/hotel/banting-my.html?cid=1450498&ds=qSflqjSDAunJhkhz"
+        target="_blank"
+        rel="noopener noreferrer"
+        size="lg"
+        className="w-fit bg-amber-500 text-white"
+      >
         Check Availability
       </Button>
     </motion.div>

@@ -13,21 +13,22 @@ import { link as linkStyles } from "@heroui/theme";
 import { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import { useRouter } from "next/navigation";
+// import { useRouter } from "next/navigation";
 import clsx from "clsx";
 
 import { siteConfig } from "@/config/site";
 import { cormorantGaramond } from "@/lib/font";
+import { Archive, Phone } from "iconoir-react";
 
 export const Navbar = () => {
   const [openMobileMenu, setOpenMobileMenu] = useState(false);
 
   const navItems = siteConfig.navItems.filter((item) => !item.status?.isHidden);
 
-  const router = useRouter();
-  const handleClick = () => {
-    router.push("/auth/login");
-  };
+  // const router = useRouter();
+  // const handleClick = () => {
+  //   router.push("/auth/login");
+  // };
 
   return (
     <HeroUINavbar
@@ -80,8 +81,30 @@ export const Navbar = () => {
         </NavbarContent>
       </NavbarContent>
 
-      <NavbarContent className="hidden sm:flex" justify="end">
-        <Button onClick={handleClick}>Login</Button>
+      <NavbarContent className="hidden sm:flex gap-8" justify="end">
+        <Link href="tel:+60331981028" className="text-sm text-white">
+          <div className="flex flex-col items-start gap-1">
+            <span className="flex items-center gap-1">
+              <Phone className="w-4 h-4" />
+              <span>Call Us</span>
+            </span>
+            <span className="hover:underline">+6 03 3198 1028</span>
+          </div>
+        </Link>
+        <Link
+          href="mailto:reservation@goldcoastresort.com.my"
+          className="text-sm text-white"
+        >
+          <div className="flex flex-col items-start gap-1">
+            <span className="flex items-center gap-1">
+              <Archive className="w-4 h-4" />
+              <span>Book A Reservation</span>
+            </span>
+            <span className="hover:underline">
+              reservation@goldcoastresort.com.my
+            </span>
+          </div>
+        </Link>
       </NavbarContent>
 
       <NavbarContent className="sm:hidden flex-1 pl-4 text-white" justify="end">
@@ -116,8 +139,16 @@ export const Navbar = () => {
               </Link>
             </NavbarMenuItem>
           ))}
-          <Button size="lg" onClick={handleClick}>
-            Login
+          <Button
+            // onClick={handleClick}
+            as="a"
+            href="https://www.agoda.com/en-gb/gold-coast-morib-international-resort/hotel/banting-my.html?cid=1450498&ds=qSflqjSDAunJhkhz"
+            target="_blank"
+            rel="noopener noreferrer"
+            size="lg"
+            className="bg-gradient-to-r from-blue-900 to-blue-500 text-amber-500"
+          >
+            Check Availability
           </Button>
         </div>
       </NavbarMenu>
