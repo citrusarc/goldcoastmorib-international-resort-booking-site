@@ -10,7 +10,7 @@ export default function OverviewSection() {
         <Image
           fill
           src="/Images/hero-banner-1.png"
-          alt="Overview"
+          alt="Overview Banner"
           className="object-cover"
         />
       </div>

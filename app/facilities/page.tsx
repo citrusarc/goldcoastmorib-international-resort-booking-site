@@ -2,9 +2,8 @@
 
 import Image from "next/image";
 import { Card, CardFooter } from "@heroui/react";
-import { rooms } from "@/data/rooms";
-import { CrownCircle } from "iconoir-react";
 import { facilities } from "@/data/facilities";
+import { merriweather } from "@/lib/font";
 
 export default function FacilitiesPage() {
   return (
@@ -12,7 +11,9 @@ export default function FacilitiesPage() {
       {facilities.map((item, index) => (
         <Card
           key={item.id}
-          className={`flex flex-col sm:flex-row p-4 sm:p-6 gap-4 sm:gap-8 w-full h-fit rounded-4xl overflow-hidden ${index % 2 === 0 ? "bg-gradient-to-r from-blue-800 to-blue-600" : "border border-blue-800 bg-white"}`}
+          className={`flex flex-col sm:flex-row ${
+            index % 2 === 1 ? "sm:flex-row-reverse" : ""
+          } p-4 sm:p-6 gap-4 sm:gap-8 w-full h-fit rounded-4xl overflow-hidden ${index % 2 === 0 ? "bg-gradient-to-r from-blue-800 to-blue-600" : "border border-blue-800 bg-white"}`}
         >
           <div className="relative w-full aspect-[16/12] rounded-2xl overflow-hidden">
             <Image
@@ -24,12 +25,12 @@ export default function FacilitiesPage() {
           </div>
           <CardFooter className="flex flex-col gap-4 sm:gap-8 items-start">
             <h2
-              className={`py-2 sm:py-4 px-4 sm:px-8 text-2xl sm:text-4xl font-semibold rounded-full ${index % 2 === 0 ? "text-white bg-gradient-to-r from-amber-600 to-amber-500" : "text-amber-500 bg-gradient-to-r from-blue-800 to-blue-600"}`}
+              className={`py-2 sm:py-4 px-4 sm:px-8 ${merriweather.className} text-2xl sm:text-4xl font-medium rounded-full ${index % 2 === 0 ? "text-white bg-gradient-to-r from-amber-600 to-amber-400" : "text-amber-500 bg-gradient-to-r from-blue-800 to-blue-500"}`}
             >
               {item.name}
             </h2>
             <p
-              className={`text-base sm:text-lg ${index % 2 === 0 ? "text-white" : "text-slate-800"}`}
+              className={`text-base sm:text-lg font-normal antialiased ${index % 2 === 0 ? "text-white" : "text-slate-800"}`}
             >
               {item.description}
             </p>
@@ -41,7 +42,7 @@ export default function FacilitiesPage() {
                   return (
                     <span
                       key={item.label}
-                      className={`inline-flex gap-2 items-center text-base sm:text-lg ${index % 2 === 0 ? "text-white/60" : "text-slate-500"}`}
+                      className={`inline-flex gap-2 items-center text-base sm:text-lg font-normal antialiased ${index % 2 === 0 ? "text-white/60" : "text-slate-500"}`}
                     >
                       <Icon
                         className="w-4 sm:w-5 h-4 sm:h-5"

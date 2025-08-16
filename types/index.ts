@@ -13,6 +13,7 @@ export type ItemStatus = {
 };
 
 export type NavItem = {
+  id: string;
   label: string;
   href?: string;
   target?: string;
@@ -27,7 +28,11 @@ export type NavItem = {
   }[];
 };
 
+export type FooterCategory = "explore" | "legal";
+
 export type FooterLink = {
+  id: string;
+  category: FooterCategory;
   label?: string;
   icon?: React.FC<IconSvgProps>;
   alt?: string;
@@ -37,10 +42,7 @@ export type FooterLink = {
   status?: ItemStatus;
 };
 
-export type FooterItem = Record<
-  "section 1" | "section 2" | "section 3" | "section 4" | "section 5",
-  FooterLink[]
->;
+export type FooterItem = FooterLink[];
 
 export type BrandLogo = {
   icon: React.FC<IconSvgProps>;
@@ -96,4 +98,18 @@ export type FacilitiesItems = {
   alt: string;
   description?: string;
   facilities?: FacilitiesProps[];
+};
+
+export type ActivitiesProps = {
+  icon?: React.FC<IconSvgProps>;
+  label?: string;
+};
+
+export type ActivitiesItem = {
+  id: string;
+  name: string;
+  image: string;
+  alt: string;
+  description?: string;
+  facilities?: ActivitiesProps[];
 };

@@ -7,8 +7,8 @@ export default function TheResortPage() {
       <div className="relative w-full h-[240px] sm:h-[360px] overflow-hidden rounded-4xl">
         <Image
           fill
-          src="/Images/hero-banner-1.png"
-          alt="Banner"
+          src="/Images/resort-banner-1.png"
+          alt="The Resort Banner"
           className="object-cover"
         />
         <div className="absolute inset-0 bg-black/30" />
@@ -59,8 +59,8 @@ export default function TheResortPage() {
             <div className="relative w-full h-[240px] sm:h-[360px] overflow-hidden rounded-4xl">
               <Image
                 fill
-                src="/Images/hero-banner-1.png"
-                alt="Banner"
+                src="/Images/resort-banner-2.png"
+                alt="Beachfron Access Banner"
                 className="object-cover"
               />
               <div className="absolute inset-0 bg-black/30" />
@@ -75,8 +75,8 @@ export default function TheResortPage() {
             <div className="relative w-full h-[240px] sm:h-[360px] overflow-hidden rounded-4xl">
               <Image
                 fill
-                src="/Images/hero-banner-1.png"
-                alt="Banner"
+                src="/Images/resort-banner-3.png"
+                alt="Water Theme Park Banner"
                 className="object-cover"
               />
               <div className="absolute inset-0 bg-black/30" />
@@ -91,8 +91,8 @@ export default function TheResortPage() {
             <div className="relative w-full h-[240px] sm:h-[360px] overflow-hidden rounded-4xl">
               <Image
                 fill
-                src="/Images/hero-banner-1.png"
-                alt="Banner"
+                src="/Images/resort-banner-4.png"
+                alt="Private Jacuzzis Banner"
                 className="object-cover"
               />
               <div className="absolute inset-0 bg-black/30" />
@@ -107,8 +107,8 @@ export default function TheResortPage() {
             <div className="relative w-full h-[240px] sm:h-[360px] overflow-hidden rounded-4xl">
               <Image
                 fill
-                src="/Images/hero-banner-1.png"
-                alt="Banner"
+                src="/Images/resort-banner-5.png"
+                alt="Dining By The Coast Banner"
                 className="object-cover"
               />
               <div className="absolute inset-0 bg-black/30" />
@@ -136,13 +136,13 @@ export default function TheResortPage() {
               <h2 className={`${merriweather.className} text-3xl sm:text-4xl`}>
                 Address
               </h2>
-              <p className="flex text-base sm:text-lg text-white">
+              <p className="flex text-base sm:text-lg font-normal antialiased text-white">
                 Lot 1234, Jalan Pantai Morib
                 <br /> Batu 24, 42700 Banting
                 <br />
                 Selangor, Malaysia
               </p>
-              <p className="flex text-base sm:text-lg text-white">
+              <p className="flex text-base sm:text-lg font-normal antialiased text-white">
                 Check In: 3:00 pm
                 <br />
                 Check Out: 12:00 pm

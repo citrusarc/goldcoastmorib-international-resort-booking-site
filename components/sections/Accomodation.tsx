@@ -5,32 +5,38 @@ import InfiniteScrollList from "@/components/ui/InfinityScrollLists";
 
 const images = [
   {
-    src: "/Images/hero-banner-1.png",
-    alt: "Ecosystem 1",
+    src: "/Images/room-1.png",
+    alt: "Room 1",
     width: 240,
     height: 240,
   },
   {
-    src: "/Images/hero-banner-1.png",
-    alt: "Ecosystem 2",
+    src: "/Images/room-2.png",
+    alt: "Room 2",
     width: 240,
     height: 240,
   },
   {
-    src: "/Images/hero-banner-1.png",
-    alt: "Ecosystem 3",
+    src: "/Images/room-3.png",
+    alt: "Room 3",
     width: 240,
     height: 240,
   },
   {
-    src: "/Images/hero-banner-1.png",
-    alt: "Ecosystem 4",
+    src: "/Images/room-4.png",
+    alt: "Room 4",
     width: 240,
     height: 240,
   },
   {
-    src: "/Images/hero-banner-1.png",
-    alt: "Ecosystem 5",
+    src: "/Images/room-5.png",
+    alt: "Room 5",
+    width: 240,
+    height: 240,
+  },
+  {
+    src: "/Images/room-6.png",
+    alt: "Room 6",
     width: 240,
     height: 240,
   },

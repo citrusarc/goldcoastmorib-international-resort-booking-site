@@ -2,8 +2,9 @@
 
 import Image from "next/image";
 import { Card, CardFooter } from "@heroui/react";
-import { rooms } from "@/data/rooms";
 import { CrownCircle } from "iconoir-react";
+import { rooms } from "@/data/rooms";
+import { merriweather } from "@/lib/font";
 
 export default function RoomsAndSuitesPage() {
   return (
@@ -22,16 +23,22 @@ export default function RoomsAndSuitesPage() {
             />
           </div>
           <CardFooter className="flex flex-col gap-4 p-4 items-start">
-            <h2 className="inline-flex gap-2 text-lg font-semibold">
+            <h2
+              className={`inline-flex gap-2 text-lg ${merriweather.className} font-medium`}
+            >
               {item.name}
               {item.isRecommended && <CrownCircle className="text-amber-500" />}
             </h2>
             <div>
-              <p className="text-slate-500">Starting from</p>
+              <p className="font-normal antialiased text-slate-500">
+                Starting from
+              </p>
               <span className="text-lg font-semibold">
                 {item.price.currency}
                 {item.price.current}
-                <span className="font-normal text-slate-500">/night</span>
+                <span className="font-normal antialiased text-slate-500">
+                  /night
+                </span>
               </span>
             </div>
             <div>
@@ -42,7 +49,7 @@ export default function RoomsAndSuitesPage() {
                   return (
                     <span
                       key={item.label}
-                      className="inline-flex gap-2 items-center text-sm text-slate-500"
+                      className="inline-flex gap-2 items-center text-sm font-normal antialiased text-slate-500"
                     >
                       <Icon className="w-4 h-4" />
                       {item.label}

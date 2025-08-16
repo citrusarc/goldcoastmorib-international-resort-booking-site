@@ -39,8 +39,8 @@ export default function WaterparkSection() {
       <div className="relative flex-1 aspect-[4/3] mt-8 sm:mt-0 overflow-visible">
         <Image
           fill
-          src="/Images/waterpark.png"
-          alt="Waterpark"
+          src="/Images/waterpark-banner-1.png"
+          alt="Waterpark Banner"
           className="object-contain"
         />
       </div>

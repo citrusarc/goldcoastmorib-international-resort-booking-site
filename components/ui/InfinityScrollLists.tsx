@@ -42,7 +42,7 @@ export default function InfiniteScrollList({
             return (
               <div
                 key={key}
-                className="flex items-center justify-center w-[120px] sm:w-[240px] h-[120px] sm:h-[240px] rounded-2xl overflow-hidden"
+                className="flex items-center justify-center w-[160px] sm:w-[280px] h-[160px] sm:h-[280px] rounded-2xl overflow-hidden"
               >
                 <Image
                   alt={item.alt}
