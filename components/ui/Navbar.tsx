@@ -10,13 +10,14 @@ import {
   Button,
 } from "@heroui/react";
 import { link as linkStyles } from "@heroui/theme";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { useRouter } from "next/navigation";
 import clsx from "clsx";
 
-import { Logo } from "./Icons";
 import { siteConfig } from "@/config/site";
+import { cormorantGaramond } from "@/lib/font";
 
 export const Navbar = () => {
   const [openMobileMenu, setOpenMobileMenu] = useState(false);
@@ -41,9 +42,19 @@ export const Navbar = () => {
     >
       <NavbarContent justify="start">
         <NavbarBrand className="max-w-fit">
-          <Link className="flex justify-start items-center gap-1" href="/">
-            <Logo />
-            <p className="font-bold">Gold Coast Resort</p>
+          <Link className="flex items-center justify-center gap-2" href="/">
+            <Image
+              src="/Images/brand-logo.png"
+              alt="brand logo"
+              width={48}
+              height={48}
+              className="object-contain pl-2 sm:pl-0"
+            />
+            <p
+              className={`${cormorantGaramond.className} sm:hidden text-xl font-medium text-white`}
+            >
+              Gold Coast Resort
+            </p>
           </Link>
         </NavbarBrand>
         <NavbarContent className="hidden sm:flex items-center justify-start ml-2 gap-4">
@@ -54,7 +65,10 @@ export const Navbar = () => {
                 <Link
                   className={clsx(
                     linkStyles({ color: "foreground" }),
-                    item.status?.isDisabled && "cursor-not-allowed !opacity-50"
+                    "text-white",
+                    item.status?.isDisabled
+                      ? "cursor-not-allowed !opacity-50"
+                      : "hover:text-blue-800"
                   )}
                   href={item.status?.isDisabled ? "#" : item.href}
                   onClick={(e) => item.status?.isDisabled && e.preventDefault()}
@@ -70,7 +84,7 @@ export const Navbar = () => {
         <Button onClick={handleClick}>Login</Button>
       </NavbarContent>
 
-      <NavbarContent className="sm:hidden flex-1 pl-4" justify="end">
+      <NavbarContent className="sm:hidden flex-1 pl-4 text-white" justify="end">
         <NavbarMenuToggle aria-label="Toggle navigation menu" />
       </NavbarContent>
 
