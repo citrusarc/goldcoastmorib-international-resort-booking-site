@@ -59,7 +59,7 @@ export default function AccomodationSection() {
           <h2 className={`${merriweather.className} text-3xl sm:text-4xl`}>
             Your Private Slice of Paradise
           </h2>
-          <p className="flex text-lg text-white">
+          <p className="flex text-base sm:text-lg text-white">
             Comfort, space, and a view to remember.
           </p>
         </div>

@@ -65,3 +65,26 @@ export type InfiniteScrollListProps = {
   items: InfiniteScrollItem[];
   duration?: number;
 };
+
+export type PriceItem = {
+  currency: string;
+  original: string;
+  current: string;
+};
+
+export type FacilitiesItem = {
+  icon?: React.FC<IconSvgProps>;
+  label?: string;
+};
+
+export type RoomItem = {
+  id: string;
+  name: string;
+  image: string;
+  alt: string;
+  description?: string;
+  facilities?: FacilitiesItem[];
+  price: PriceItem;
+  isDiscount: boolean;
+  isRecommended: boolean;
+};

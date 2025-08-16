@@ -21,7 +21,7 @@ export default function OverviewSection() {
         >
           Seaside Gem on Selangor&apos;s Tranquil Coast
         </h2>
-        <p className="flex text-lg text-slate-800">
+        <p className="flex text-base sm:text-lg text-slate-800">
           Wake up to the rhythm of the waves, unwind in your private jacuzzi,
           and make a splash with the kids at the onsite water theme park, all
           just steps from your suite.
@@ -30,35 +30,35 @@ export default function OverviewSection() {
           <div
             className="flex flex-col sm:flex-row items-center sm:items-start justify-center sm:justify-start 
                 w-24 h-24 sm:w-fit sm:h-auto 
-                px-0 sm:px-4 py-0 sm:py-2 
-                gap-0 sm:gap-2 
-                rounded-full sm:rounded-full 
+                sm:px-4 sm:py-2 
+                gap-2
+                rounded-full
                 border border-blue-500 bg-blue-50 text-blue-500"
           >
             <Bed className="w-6 h-6" />
-            <span className="text-lg">Stay</span>
+            <span className="text-base sm:text-lg">Stay</span>
           </div>
           <div
             className="flex flex-col sm:flex-row items-center sm:items-start justify-center sm:justify-start 
                 w-24 h-24 sm:w-fit sm:h-auto 
-                px-0 sm:px-4 py-0 sm:py-2 
-                gap-0 sm:gap-2 
-                rounded-full sm:rounded-full 
+                sm:px-4 sm:py-2 
+                gap-2
+                rounded-full
                 border border-blue-50 bg-gradient-to-r from-blue-800 to-blue-500 text-amber-500"
           >
             <Cutlery className="w-6 h-6" />
-            <span className="text-lg">Dine</span>
+            <span className="text-base sm:text-lg">Dine</span>
           </div>
           <div
             className="flex flex-col sm:flex-row items-center sm:items-start justify-center sm:justify-start 
-                w-24 h-24 sm:w-fit sm:h-auto 
-                px-0 sm:px-4 py-0 sm:py-2 
-                gap-0 sm:gap-2 
-                rounded-full sm:rounded-full 
-                border border-blue-500 bg-blue-50 text-blue-500"
+            w-24 h-24 sm:w-fit sm:h-auto 
+            sm:px-4 sm:py-2 
+            gap-2
+            rounded-full
+            border border-blue-500 bg-blue-50 text-blue-500"
           >
             <BirthdayCake className="w-6 h-6" />
-            <span className="text-lg">Party</span>
+            <span className="text-base sm:text-lg">Party</span>
           </div>
         </div>
       </div>

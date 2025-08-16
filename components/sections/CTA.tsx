@@ -7,7 +7,7 @@ export default function CTASection() {
       <h2 className={`${merriweather.className} text-3xl sm:text-4xl`}>
         Your Beachfront Escape Awaits
       </h2>
-      <p className="flex text-center text-lg text-white">
+      <p className="flex text-center text-base sm:text-lg text-white">
         Whether it’s a weekend retreat or a long-awaited holiday, the perfect
         stay begins here.
       </p>

@@ -17,14 +17,14 @@ export default function ReviewSection() {
           <StarSolid className="w-8 h-8 text-amber-500" />
           <StarSolid className="w-8 h-8 text-amber-500" />
         </div>
-        <p className="flex text-center text-lg text-slate-500">
+        <p className="flex text-center text-base sm:text-lg text-slate-500">
           4-star review on Google
         </p>
         <div className="flex flex-col sm:flex-row w-full items-center justify-center gap-4 text-slate-800">
           {quotes.map((item) => (
             <div
               key={item.author}
-              className="flex flex-col p-4 gap-4 text-start rounded-2xl border border-slate-200"
+              className="flex flex-col p-4 gap-4 text-start  rounded-2xl border border-slate-200"
             >
               {item.message}
               <p className="font-semibold text-slate-800">{item.author}</p>

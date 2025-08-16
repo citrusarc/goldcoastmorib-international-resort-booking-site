@@ -16,7 +16,7 @@ export default function TheResortPage() {
           <h2 className={`${cormorantGaramond.className} text-3xl sm:text-5xl`}>
             Where Coastline Calm Meets Carefree Comfort
           </h2>
-          <p className="flex text-lg">
+          <p className="flex text-base sm:text-lg">
             A beachfront escape just an hour from Kuala Lumpur
           </p>
         </div>
@@ -27,7 +27,7 @@ export default function TheResortPage() {
         >
           Seaside Serenity Awaits
         </h2>
-        <p className="flex text-lg text-slate-800">
+        <p className="flex text-base sm:text-lg text-slate-800">
           Nestled along Selangor’s golden coastline, Gold Coast Morib Resort
           invites you to unwind in a space where nature and modern comfort blend
           effortlessly. Whether you’re planning a romantic retreat or a
@@ -136,13 +136,13 @@ export default function TheResortPage() {
               <h2 className={`${merriweather.className} text-3xl sm:text-4xl`}>
                 Address
               </h2>
-              <p className="flex text-lg text-white">
+              <p className="flex text-base sm:text-lg text-white">
                 Lot 1234, Jalan Pantai Morib
                 <br /> Batu 24, 42700 Banting
                 <br />
                 Selangor, Malaysia
               </p>
-              <p className="flex text-lg text-white">
+              <p className="flex text-base sm:text-lg text-white">
                 Check In: 3:00 pm
                 <br />
                 Check Out: 12:00 pm
