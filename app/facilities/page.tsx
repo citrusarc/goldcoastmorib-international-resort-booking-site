@@ -4,16 +4,17 @@ import Image from "next/image";
 import { Card, CardFooter } from "@heroui/react";
 import { rooms } from "@/data/rooms";
 import { CrownCircle } from "iconoir-react";
+import { facilities } from "@/data/facilities";
 
 export default function FacilitiesPage() {
   return (
-    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 mt-8 sm:mt-16 mb-16">
-      {rooms.map((item) => (
+    <div className="flex flex-col gap-8 sm:gap-16 mt-8 sm:mt-16 mb-16">
+      {facilities.map((item, index) => (
         <Card
           key={item.id}
-          className="flex flex-col w-full h-fit rounded-2xl overflow-hidden"
+          className={`flex flex-col sm:flex-row p-4 sm:p-6 gap-4 sm:gap-8 w-full h-fit rounded-4xl overflow-hidden ${index % 2 === 0 ? "bg-gradient-to-r from-blue-800 to-blue-600" : "border border-blue-800 bg-white"}`}
         >
-          <div className="relative w-full aspect-[4/3]">
+          <div className="relative w-full aspect-[16/12] rounded-2xl overflow-hidden">
             <Image
               fill
               src={item.image}
@@ -21,19 +22,17 @@ export default function FacilitiesPage() {
               className="object-cover object-center"
             />
           </div>
-          <CardFooter className="flex flex-col gap-4 p-4 items-start">
-            <h2 className="inline-flex gap-2 text-lg font-semibold">
+          <CardFooter className="flex flex-col gap-4 sm:gap-8 items-start">
+            <h2
+              className={`py-2 sm:py-4 px-4 sm:px-8 text-2xl sm:text-4xl font-semibold rounded-full ${index % 2 === 0 ? "text-white bg-gradient-to-r from-amber-600 to-amber-500" : "text-amber-500 bg-gradient-to-r from-blue-800 to-blue-600"}`}
+            >
               {item.name}
-              {item.isRecommended && <CrownCircle className="text-amber-500" />}
             </h2>
-            <div>
-              <p className="text-slate-500">Starting from</p>
-              <span className="text-lg font-semibold">
-                {item.price.currency}
-                {item.price.current}
-                <span className="font-normal text-slate-500">/night</span>
-              </span>
-            </div>
+            <p
+              className={`text-base sm:text-lg ${index % 2 === 0 ? "text-white" : "text-slate-800"}`}
+            >
+              {item.description}
+            </p>
             <div>
               <div className="flex flex-col gap-2">
                 {item.facilities?.map((item) => {
@@ -42,9 +41,12 @@ export default function FacilitiesPage() {
                   return (
                     <span
                       key={item.label}
-                      className="inline-flex gap-2 items-center text-sm text-slate-500"
+                      className={`inline-flex gap-2 items-center text-base sm:text-lg ${index % 2 === 0 ? "text-white/60" : "text-slate-500"}`}
                     >
-                      <Icon className="w-4 h-4" />
+                      <Icon
+                        className="w-4 sm:w-5 h-4 sm:h-5"
+                        strokeWidth={1.8}
+                      />
                       {item.label}
                     </span>
                   );

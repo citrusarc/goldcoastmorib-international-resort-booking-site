@@ -2,7 +2,7 @@
 
 import { Button } from "@heroui/button";
 
-import { cormorantGaramond, zain } from "@/lib/font";
+import { cormorantGaramond } from "@/lib/font";
 
 export default function HeroSection() {
   return (
