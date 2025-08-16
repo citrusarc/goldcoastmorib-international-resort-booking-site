@@ -1,10 +1,18 @@
 import Image from "next/image";
-import { merriweather } from "@/lib/font";
 import { Lifebelt, Stroller, SunLight } from "iconoir-react";
+import { motion } from "framer-motion";
+
+import { merriweather } from "@/lib/font";
 
 export default function WaterparkSection() {
   return (
-    <div className="flex flex-col sm:flex-row w-full gap-8 mt-8 sm:mt-16">
+    <motion.div
+      initial={{ opacity: 0, y: -10 }}
+      transition={{ duration: 0.5, ease: "easeIn" }}
+      viewport={{ once: true }}
+      whileInView={{ opacity: 1, y: 0 }}
+      className="flex flex-col sm:flex-row w-full gap-8 mt-8 sm:mt-16"
+    >
       <div className="flex flex-col gap-8 flex-1">
         <h2
           className={`${merriweather.className} text-3xl sm:text-4xl text-blue-800`}
@@ -44,7 +52,7 @@ export default function WaterparkSection() {
           className="object-contain"
         />
       </div>
-    </div>
+    </motion.div>
   );
 }
 ``;

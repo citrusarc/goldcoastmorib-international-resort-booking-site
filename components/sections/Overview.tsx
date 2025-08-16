@@ -1,11 +1,18 @@
 import Image from "next/image";
 import { motion } from "framer-motion";
 import { Bed, BirthdayCake, Cutlery } from "iconoir-react";
+
 import { merriweather } from "@/lib/font";
 
 export default function OverviewSection() {
   return (
-    <div className="flex flex-col sm:flex-row mt-0 sm:mt-16 gap-16">
+    <motion.div
+      initial={{ opacity: 0, y: -10 }}
+      transition={{ duration: 0.5, ease: "easeIn" }}
+      viewport={{ once: true }}
+      whileInView={{ opacity: 1, y: 0 }}
+      className="flex flex-col sm:flex-row mt-0 sm:mt-16 gap-16"
+    >
       <div className="relative w-full sm:w-1/2 max-w-sm aspect-square rounded-b-full overflow-hidden">
         <Image
           fill
@@ -62,6 +69,6 @@ export default function OverviewSection() {
           </div>
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 }

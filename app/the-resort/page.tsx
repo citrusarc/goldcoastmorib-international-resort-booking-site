@@ -1,10 +1,20 @@
+"use client";
+
 import Image from "next/image";
+import { motion } from "framer-motion";
+
 import { cormorantGaramond, merriweather } from "@/lib/font";
 
 export default function TheResortPage() {
   return (
     <div className="relative flex flex-col gap-8 mt-8 sm:mt-16">
-      <div className="relative w-full h-[240px] sm:h-[360px] overflow-hidden rounded-4xl">
+      <motion.div
+        initial={{ opacity: 0, y: -10 }}
+        transition={{ duration: 0.5, ease: "easeIn" }}
+        viewport={{ once: true }}
+        whileInView={{ opacity: 1, y: 0 }}
+        className="relative w-full h-[240px] sm:h-[360px] overflow-hidden rounded-4xl"
+      >
         <Image
           fill
           src="/Images/resort-banner-1.png"
@@ -20,8 +30,14 @@ export default function TheResortPage() {
             A beachfront escape just an hour from Kuala Lumpur
           </p>
         </div>
-      </div>
-      <div className="flex flex-col gap-8 mt-8 sm:mt-16 items-center justify-center text-center">
+      </motion.div>
+      <motion.div
+        initial={{ opacity: 0, y: -10 }}
+        transition={{ duration: 0.5, ease: "easeIn" }}
+        viewport={{ once: true }}
+        whileInView={{ opacity: 1, y: 0 }}
+        className="flex flex-col gap-8 mt-8 sm:mt-16 items-center justify-center text-center"
+      >
         <h2
           className={`${merriweather.className} text-3xl sm:text-4xl text-amber-500`}
         >
@@ -34,7 +50,7 @@ export default function TheResortPage() {
           fun-filled family holiday, our resort offers the perfect backdrop to
           make your stay unforgettable.
         </p>
-      </div>
+      </motion.div>
       <div className="relative flex flex-col">
         <div
           className="relative flex flex-col left-1/2 -translate-x-1/2 w-screen mt-8 sm:mt-16 py-8 sm:py-16 px-6 lg:px-[280px] sm:px-6 gap-8 sm:gap-16 items-end rounded-tl-[64px] sm:rounded-tl-[180px] text-amber-500"
@@ -55,7 +71,13 @@ export default function TheResortPage() {
           >
             What&apos;s going on?
           </h2>
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 w-full">
+          <motion.div
+            initial={{ opacity: 0, y: -10 }}
+            transition={{ duration: 0.5, ease: "easeIn" }}
+            viewport={{ once: true }}
+            whileInView={{ opacity: 1, y: 0 }}
+            className="grid grid-cols-1 sm:grid-cols-2 gap-8 w-full"
+          >
             <div className="relative w-full h-[240px] sm:h-[360px] overflow-hidden rounded-4xl">
               <Image
                 fill
@@ -120,7 +142,7 @@ export default function TheResortPage() {
                 </h2>
               </div>
             </div>
-          </div>
+          </motion.div>
         </div>
         <div className="relative left-1/2 -translate-x-1/2 w-screen h-[480px] sm:h-[640px] overflow-hidden">
           <Image
@@ -132,7 +154,13 @@ export default function TheResortPage() {
 
           <div className="absolute inset-0 bg-black/30" />
           <div className="absolute flex flex-col inset-0 px-6 lg:px-[280px] sm:px-6 items-center sm:items-end justify-center text-white">
-            <div className="flex flex-col p-12 gap-8 w-full sm:w-2xl items-start justify-start text-start rounded-4xl text-amber-500  bg-gradient-to-r from-blue-800 to-blue-600">
+            <motion.div
+              initial={{ opacity: 0, y: -10 }}
+              transition={{ duration: 0.5, ease: "easeIn" }}
+              viewport={{ once: true }}
+              whileInView={{ opacity: 1, y: 0 }}
+              className="flex flex-col p-12 gap-8 w-full sm:w-2xl items-start justify-start text-start rounded-4xl text-amber-500  bg-gradient-to-r from-blue-800 to-blue-600"
+            >
               <h2 className={`${merriweather.className} text-3xl sm:text-4xl`}>
                 Address
               </h2>
@@ -147,7 +175,7 @@ export default function TheResortPage() {
                 <br />
                 Check Out: 12:00 pm
               </p>
-            </div>
+            </motion.div>
           </div>
         </div>
       </div>

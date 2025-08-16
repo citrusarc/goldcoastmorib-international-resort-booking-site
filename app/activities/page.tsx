@@ -1,5 +1,8 @@
+"use client";
+
 import Image from "next/image";
 import { cormorantGaramond, merriweather } from "@/lib/font";
+import { motion } from "framer-motion";
 
 import { activities } from "@/data/activities";
 import TiltCardGallery from "@/components/ui/TiltCardGallery";
@@ -45,7 +48,13 @@ export default function ActivitiesPage() {
           ]}
         />
       </div>
-      <div className="relative mt-8 sm:mt-16 w-full h-[240px] sm:h-[360px] overflow-hidden rounded-4xl">
+      <motion.div
+        initial={{ opacity: 0, y: -10 }}
+        transition={{ duration: 0.5, ease: "easeIn" }}
+        viewport={{ once: true }}
+        whileInView={{ opacity: 1, y: 0 }}
+        className="relative mt-8 sm:mt-16 w-full h-[240px] sm:h-[360px] overflow-hidden rounded-4xl"
+      >
         <Image
           fill
           src="/Images/activities-banner-1.png"
@@ -61,8 +70,14 @@ export default function ActivitiesPage() {
             A magical glow along the river
           </p>
         </div>
-      </div>
-      <div className="flex flex-col gap-8 mt-8 sm:mt-16 items-center justify-center text-center">
+      </motion.div>
+      <motion.div
+        initial={{ opacity: 0, y: -10 }}
+        transition={{ duration: 0.5, ease: "easeIn" }}
+        viewport={{ once: true }}
+        whileInView={{ opacity: 1, y: 0 }}
+        className="flex flex-col gap-8 mt-8 sm:mt-16 items-center justify-center text-center"
+      >
         <h2
           className={`${merriweather.className} text-3xl sm:text-4xl text-amber-500`}
         >
@@ -74,7 +89,7 @@ export default function ActivitiesPage() {
           Discover nature, culture, and thrills just minutes away from your
           stay.
         </p>
-      </div>
+      </motion.div>
       <div className="relative flex flex-col">
         <div
           className="relative flex flex-col left-1/2 -translate-x-1/2 w-screen mt-8 sm:mt-16 py-8 sm:py-24 px-8 lg:px-[280px] sm:px-6 gap-8 sm:gap-16 rounded-tl-[64px] sm:rounded-tl-[180px] rounded-br-[64px] sm:rounded-br-[180px] text-amber-500"
@@ -92,51 +107,58 @@ export default function ActivitiesPage() {
         >
           <div className="flex flex-col gap-8 sm:gap-16">
             {activities.map((item, index) => (
-              <div
+              <motion.div
                 key={item.id}
-                className={`flex flex-col sm:flex-row ${
-                  index % 2 === 1 ? "sm:flex-row-reverse" : ""
-                } gap-8 sm:gap-16 w-full h-fit`}
+                initial={{ opacity: 0, y: -10 }}
+                transition={{ duration: 0.5, ease: "easeIn" }}
+                viewport={{ once: true }}
+                whileInView={{ opacity: 1, y: 0 }}
               >
-                <div className="relative w-full sm:w-1/2 h-[240px] sm:h-[400px] rounded-2xl overflow-hidden">
-                  <Image
-                    fill
-                    src={item.image}
-                    alt={item.alt}
-                    className="object-cover object-center"
-                  />
-                </div>
-                <div className="flex flex-col gap-4 sm:gap-8 w-full sm:w-1/2 items-start">
-                  <h2
-                    className={`${merriweather.className} text-2xl sm:text-4xl font-medium`}
-                  >
-                    {item.name}
-                  </h2>
-                  <p className="text-base sm:text-lg font-normal antialiased text-white">
-                    {item.description}
-                  </p>
-                  <div>
-                    <div className="flex flex-col gap-2">
-                      {item.facilities?.map((item) => {
-                        if (!item.icon) return null;
-                        const Icon = item.icon;
-                        return (
-                          <span
-                            key={item.label}
-                            className="inline-flex gap-2 items-center text-base sm:text-lg font-normal antialiased text-white/80"
-                          >
-                            <Icon
-                              className="w-4 sm:w-5 h-4 sm:h-5"
-                              strokeWidth={1.8}
-                            />
-                            {item.label}
-                          </span>
-                        );
-                      })}
+                <div
+                  className={`flex flex-col sm:flex-row ${
+                    index % 2 === 1 ? "sm:flex-row-reverse" : ""
+                  } gap-8 sm:gap-16 w-full h-fit`}
+                >
+                  <div className="relative w-full sm:w-1/2 h-[240px] sm:h-[400px] rounded-2xl overflow-hidden">
+                    <Image
+                      fill
+                      src={item.image}
+                      alt={item.alt}
+                      className="object-cover object-center"
+                    />
+                  </div>
+                  <div className="flex flex-col gap-4 sm:gap-8 w-full sm:w-1/2 items-start">
+                    <h2
+                      className={`${merriweather.className} text-2xl sm:text-4xl font-medium`}
+                    >
+                      {item.name}
+                    </h2>
+                    <p className="text-base sm:text-lg font-normal antialiased text-white">
+                      {item.description}
+                    </p>
+                    <div>
+                      <div className="flex flex-col gap-2">
+                        {item.facilities?.map((item) => {
+                          if (!item.icon) return null;
+                          const Icon = item.icon;
+                          return (
+                            <span
+                              key={item.label}
+                              className="inline-flex gap-2 items-center text-base sm:text-lg font-normal antialiased text-white/80"
+                            >
+                              <Icon
+                                className="w-4 sm:w-5 h-4 sm:h-5"
+                                strokeWidth={1.8}
+                              />
+                              {item.label}
+                            </span>
+                          );
+                        })}
+                      </div>
                     </div>
                   </div>
                 </div>
-              </div>
+              </motion.div>
             ))}
           </div>
         </div>
