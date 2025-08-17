@@ -13,7 +13,7 @@ import { link as linkStyles } from "@heroui/theme";
 import { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
-// import { useRouter } from "next/navigation";
+import { usePathname } from "next/navigation";
 import clsx from "clsx";
 
 import { siteConfig } from "@/config/site";
@@ -22,20 +22,18 @@ import { Archive, Phone } from "iconoir-react";
 
 export const Navbar = () => {
   const [openMobileMenu, setOpenMobileMenu] = useState(false);
+  const pathname = usePathname();
 
   const navItems = siteConfig.navItems.filter((item) => !item.status?.isHidden);
 
-  // const router = useRouter();
-  // const handleClick = () => {
-  //   router.push("/auth/login");
-  // };
+  const isHome = pathname === "/";
+  const textColor = isHome ? "text-white" : "text-black";
 
   return (
     <HeroUINavbar
       isMenuOpen={openMobileMenu}
       onMenuOpenChange={setOpenMobileMenu}
       maxWidth="xl"
-      position="sticky"
       className={clsx(
         "transition-colors duration-300 ease-in-out",
         openMobileMenu ? "bg-background/70" : "bg-transparent"
@@ -52,7 +50,10 @@ export const Navbar = () => {
               className="object-contain pl-2 sm:pl-0"
             />
             <p
-              className={`${cormorantGaramond.className} sm:hidden text-xl font-medium text-white`}
+              className={clsx(
+                `${cormorantGaramond.className} sm:hidden text-xl font-medium`,
+                textColor
+              )}
             >
               Gold Coast Resort
             </p>
@@ -66,7 +67,7 @@ export const Navbar = () => {
                 <Link
                   className={clsx(
                     linkStyles({ color: "foreground" }),
-                    "text-white",
+                    textColor,
                     item.status?.isDisabled
                       ? "cursor-not-allowed !opacity-50"
                       : "hover:text-blue-800"
@@ -82,7 +83,7 @@ export const Navbar = () => {
       </NavbarContent>
 
       <NavbarContent className="hidden sm:flex gap-8" justify="end">
-        <Link href="tel:+60331981028" className="text-sm text-white">
+        <Link href="tel:+60331981028" className={clsx("text-sm", textColor)}>
           <div className="flex flex-col items-start gap-1">
             <span className="flex items-center gap-1">
               <Phone className="w-4 h-4" />
@@ -93,7 +94,7 @@ export const Navbar = () => {
         </Link>
         <Link
           href="mailto:reservation@goldcoastresort.com.my"
-          className="text-sm text-white"
+          className={clsx("text-sm", textColor)}
         >
           <div className="flex flex-col items-start gap-1">
             <span className="flex items-center gap-1">
@@ -107,7 +108,10 @@ export const Navbar = () => {
         </Link>
       </NavbarContent>
 
-      <NavbarContent className="sm:hidden flex-1 pl-4 text-white" justify="end">
+      <NavbarContent
+        className={clsx("sm:hidden flex-1 pl-4", textColor)}
+        justify="end"
+      >
         <NavbarMenuToggle aria-label="Toggle navigation menu" />
       </NavbarContent>
 
@@ -146,7 +150,7 @@ export const Navbar = () => {
             target="_blank"
             rel="noopener noreferrer"
             size="lg"
-            className="bg-gradient-to-r from-blue-900 to-blue-500 text-amber-500"
+            className="bg-gradient-to-r from-blue-900 to-blue-500 text-amber-400"
           >
             Check Availability
           </Button>

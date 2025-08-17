@@ -36,7 +36,7 @@ export default function HeroSection() {
             target="_blank"
             rel="noopener noreferrer"
             size="lg"
-            className="mt-4 sm:mt-12 sm:p-12 sm:py-8 sm:text-lg bg-gradient-to-r from-blue-900 to-blue-500 text-amber-500"
+            className="mt-4 sm:mt-12 sm:p-12 sm:py-8 sm:text-lg bg-gradient-to-r from-blue-900 to-blue-500 text-amber-400"
           >
             Reserve Your Escaped
           </Button>
