@@ -27,7 +27,7 @@ export default function CTASection() {
         size="lg"
         className="w-fit bg-amber-500 text-white"
       >
-        Check Availability test
+        Check Availability
       </Button>
     </motion.div>
   );
