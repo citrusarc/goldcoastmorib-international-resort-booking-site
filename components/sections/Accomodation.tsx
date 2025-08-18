@@ -50,7 +50,7 @@ export default function AccomodationSection() {
           <svg
             data-name="Layer 1"
             xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 1200 140"
+            viewBox="0 0 1200 160"
             preserveAspectRatio="none"
             className="block w-full -mt-1 -mb-1"
           >
