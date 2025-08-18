@@ -1,11 +1,2 @@
 @import "tailwindcss";
 @config "../tailwind.config.js";
-
-body,
-input,
-textarea,
-select,
-a {
-  background-color: #fff !important;
-  color: #000 !important;
-}
