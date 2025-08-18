@@ -19,7 +19,6 @@ export const metadata: Metadata = {
   },
   keywords: [
     "Gold Coast Morib",
-    "Gold Coast Morib International Resort",
     "Morib beach resort",
     "family resort Selangor",
     "waterpark Malaysia",
@@ -62,7 +61,7 @@ export const metadata: Metadata = {
     images: [
       "https://goldcoastresort-booking-site.vercel.app/Images/banner.png",
     ],
-    creator: "@goldcoastmorib", // optional, remove if no Twitter
+    creator: "@goldcoastmorib",
   },
   robots: {
     index: true,
@@ -87,21 +86,9 @@ export default function RootLayout({
       className="light overflow-x-hidden"
       lang="en"
     >
-      <head>
-        <meta
-          name="theme-color"
-          content="#ffffff"
-          media="(prefers-color-scheme: light)"
-        />
-        <meta
-          name="theme-color"
-          content="#ffffff"
-          media="(prefers-color-scheme: dark)"
-        />
-      </head>
       <body
         className={clsx(
-          "min-h-screen text-slate-800 bg-white overflow-x-hidden font-sans antialiased",
+          "min-h-screen text-slate-800 bg-white font-sans antialiased",
           fontSans.variable
         )}
       >
