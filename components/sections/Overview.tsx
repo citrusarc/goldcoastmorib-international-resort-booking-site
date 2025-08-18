@@ -11,7 +11,7 @@ export default function OverviewSection() {
       transition={{ duration: 0.5, ease: "easeIn" }}
       viewport={{ once: true }}
       whileInView={{ opacity: 1, y: 0 }}
-      className="flex flex-col sm:flex-row mt-0 sm:mt-16 gap-16"
+      className="flex flex-col sm:flex-row mt-0 sm:mt-16 gap-16 bg-white"
     >
       <div className="relative w-full sm:w-1/2 max-w-sm aspect-square rounded-b-full overflow-hidden">
         <Image
