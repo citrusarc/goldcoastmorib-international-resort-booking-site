@@ -91,7 +91,7 @@ export default function RootLayout({
       </head>
       <body
         className={clsx(
-          "min-h-screen text-slate-800 bg-background overflow-x-hidden font-sans antialiased",
+          "min-h-screen text-slate-800 bg-white overflow-x-hidden font-sans antialiased",
           fontSans.variable
         )}
         style={{
