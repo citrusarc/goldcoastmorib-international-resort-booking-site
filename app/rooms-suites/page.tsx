@@ -23,6 +23,8 @@ export default function RoomsAndSuitesPage() {
             <div className="relative w-full aspect-[4/3]">
               <Image
                 fill
+                priority
+                fetchPriority="high"
                 src={item.image}
                 alt={item.alt}
                 className="object-cover object-center"

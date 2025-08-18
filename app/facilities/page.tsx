@@ -32,6 +32,8 @@ export default function FacilitiesPage() {
               <div className="relative w-full aspect-[16/12] rounded-2xl overflow-hidden">
                 <Image
                   fill
+                  priority
+                  fetchPriority="high"
                   src={item.image}
                   alt={item.alt}
                   className="object-cover object-center"

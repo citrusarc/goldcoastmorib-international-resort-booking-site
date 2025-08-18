@@ -17,6 +17,8 @@ export default function TheResortPage() {
       >
         <Image
           fill
+          priority
+          fetchPriority="high"
           src="/Images/resort-banner-1.png"
           alt="The Resort Banner"
           className="object-cover"
@@ -81,6 +83,8 @@ export default function TheResortPage() {
             <div className="relative w-full h-[240px] sm:h-[360px] overflow-hidden rounded-4xl">
               <Image
                 fill
+                priority
+                fetchPriority="high"
                 src="/Images/resort-banner-2.png"
                 alt="Beachfron Access Banner"
                 className="object-cover"
@@ -97,6 +101,8 @@ export default function TheResortPage() {
             <div className="relative w-full h-[240px] sm:h-[360px] overflow-hidden rounded-4xl">
               <Image
                 fill
+                priority
+                fetchPriority="high"
                 src="/Images/resort-banner-3.png"
                 alt="Water Theme Park Banner"
                 className="object-cover"
@@ -113,6 +119,8 @@ export default function TheResortPage() {
             <div className="relative w-full h-[240px] sm:h-[360px] overflow-hidden rounded-4xl">
               <Image
                 fill
+                priority
+                fetchPriority="high"
                 src="/Images/resort-banner-4.png"
                 alt="Private Jacuzzis Banner"
                 className="object-cover"
@@ -129,6 +137,8 @@ export default function TheResortPage() {
             <div className="relative w-full h-[240px] sm:h-[360px] overflow-hidden rounded-4xl">
               <Image
                 fill
+                priority
+                fetchPriority="high"
                 src="/Images/resort-banner-5.png"
                 alt="Dining By The Coast Banner"
                 className="object-cover"
@@ -147,6 +157,8 @@ export default function TheResortPage() {
         <div className="relative left-1/2 -translate-x-1/2 w-screen h-[480px] sm:h-[640px] overflow-hidden">
           <Image
             fill
+            priority
+            fetchPriority="high"
             src="/Images/hero-banner-1.png"
             alt="Banner"
             className="object-cover"

@@ -16,6 +16,8 @@ export default function OverviewSection() {
       <div className="relative w-full sm:w-1/2 max-w-sm aspect-square rounded-b-full overflow-hidden">
         <Image
           fill
+          priority
+          fetchPriority="high"
           src="/Images/hero-banner-1.png"
           alt="Overview Banner"
           className="object-cover"

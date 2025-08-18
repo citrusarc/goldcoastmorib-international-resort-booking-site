@@ -57,6 +57,8 @@ export default function ActivitiesPage() {
       >
         <Image
           fill
+          priority
+          fetchPriority="high"
           src="/Images/activities-banner-1.png"
           alt="Activity Banner 1"
           className="object-cover"
@@ -122,6 +124,8 @@ export default function ActivitiesPage() {
                   <div className="relative w-full sm:w-1/2 h-[240px] sm:h-[400px] rounded-2xl overflow-hidden">
                     <Image
                       fill
+                      priority
+                      fetchPriority="high"
                       src={item.image}
                       alt={item.alt}
                       className="object-cover object-center"
