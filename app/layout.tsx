@@ -1,5 +1,5 @@
 import "@/styles/globals.css";
-import { Metadata, Viewport } from "next";
+import { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import clsx from "clsx";
@@ -82,15 +82,36 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html suppressHydrationWarning className="overflow-x-hidden" lang="en">
-      <head />
+    <html
+      suppressHydrationWarning
+      className="light overflow-x-hidden"
+      lang="en"
+    >
+      <head>
+        <meta
+          name="theme-color"
+          content="#ffffff"
+          media="(prefers-color-scheme: light)"
+        />
+        <meta
+          name="theme-color"
+          content="#ffffff"
+          media="(prefers-color-scheme: dark)"
+        />
+      </head>
       <body
         className={clsx(
-          "min-h-screen text-slate-800 bg-background overflow-x-hidden font-sans antialiased",
+          "min-h-screen text-slate-800 bg-white overflow-x-hidden font-sans antialiased",
           fontSans.variable
         )}
       >
-        <Providers themeProps={{ attribute: "class", defaultTheme: "light" }}>
+        <Providers
+          themeProps={{
+            attribute: "class",
+            defaultTheme: "light",
+            enableSystem: false,
+          }}
+        >
           <div className="relative flex flex-col h-screen">
             <Navbar />
             <main className="relative z-10 container mx-auto max-w-7xl px-6 flex-grow">
