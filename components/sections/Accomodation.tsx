@@ -46,7 +46,7 @@ export default function AccomodationSection() {
   return (
     <div className="relative mt-8 sm:mt-16">
       <div className="relative left-1/2 -translate-x-1/2 w-screen">
-        <div className="custom-shape-divider-top-1754616394 overflow-hidden bg-blue-800">
+        <div className="custom-shape-divider-top-1754616394 bg-blue-800">
           <svg
             data-name="Layer 1"
             xmlns="http://www.w3.org/2000/svg"
@@ -55,9 +55,9 @@ export default function AccomodationSection() {
             className="block w-full -mt-4 -mb-2"
           >
             <path
-              d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V-2H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z"
+              d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z"
               fill="white"
-            />
+            ></path>
           </svg>
         </div>
       </div>
