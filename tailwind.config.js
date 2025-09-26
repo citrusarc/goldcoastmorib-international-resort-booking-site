@@ -16,7 +16,25 @@ const config = {
     },
   },
   darkMode: false,
-  plugins: [heroui()],
+  plugins: [
+    heroui({
+      prefix: "heroui",
+      addCommonColors: false,
+      defaultTheme: "light",
+      defaultExtendTheme: "light",
+      layout: {},
+      themes: {
+        light: {
+          layout: {},
+          colors: {},
+        },
+        dark: {
+          layout: {},
+          colors: {},
+        },
+      },
+    }),
+  ],
 };
 
 module.exports = config;

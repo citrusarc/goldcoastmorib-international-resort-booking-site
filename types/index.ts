@@ -81,6 +81,7 @@ export type FacilitiesProps = {
 
 export type RoomItem = {
   id: string;
+  slug: string;
   name: string;
   image: string;
   alt: string;

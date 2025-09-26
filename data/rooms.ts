@@ -4,6 +4,7 @@ import { Bathroom, Bed, MediaImage } from "iconoir-react";
 export const rooms: RoomItem[] = [
   {
     id: "studio-suite",
+    slug: "studio-suite",
     name: "Studio Suite",
     image: "/Images/room-1.png",
     alt: "Room 1",
@@ -20,6 +21,7 @@ export const rooms: RoomItem[] = [
   },
   {
     id: "apartment-balcony",
+    slug: "apartment-balcony",
     name: "Apartment With Balcony",
     image: "/Images/room-2.png",
     alt: "Room 2",
@@ -36,6 +38,7 @@ export const rooms: RoomItem[] = [
   },
   {
     id: "two-rooms-apartment",
+    slug: "two-rooms-apartment",
     name: "2 Rooms Apartment",
     image: "/Images/room-3.png",
     alt: "Room 3",
@@ -52,6 +55,7 @@ export const rooms: RoomItem[] = [
   },
   {
     id: "three-rooms-apartment",
+    slug: "three-rooms-apartment",
     name: "3 Rooms Apartment",
     image: "/Images/room-4.png",
     alt: "Room 4",
@@ -68,6 +72,7 @@ export const rooms: RoomItem[] = [
   },
   {
     id: "penthouse-room",
+    slug: "penthouse-room",
     name: "Penthouse Room",
     image: "/Images/room-5.png",
     alt: "Room 5",
