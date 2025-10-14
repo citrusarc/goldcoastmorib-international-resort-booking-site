@@ -30,7 +30,7 @@ export type NavItem = {
 
 export type FooterCategory = "explore" | "legal";
 
-export type FooterLink = {
+export type FooterItem = {
   id: string;
   category: FooterCategory;
   label?: string;
@@ -41,8 +41,6 @@ export type FooterLink = {
   rel?: string;
   status?: ItemStatus;
 };
-
-export type FooterItem = FooterLink[];
 
 export type BrandLogo = {
   icon: React.FC<IconSvgProps>;
