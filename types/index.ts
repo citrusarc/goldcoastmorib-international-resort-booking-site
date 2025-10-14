@@ -28,11 +28,9 @@ export type NavItem = {
   }[];
 };
 
-export type FooterCategory = "explore" | "legal";
-
 export type FooterItem = {
   id: string;
-  category: FooterCategory;
+  category: string;
   label?: string;
   icon?: React.FC<IconSvgProps>;
   alt?: string;
